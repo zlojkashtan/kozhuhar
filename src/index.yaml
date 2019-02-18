@@ -1,0 +1,19 @@
+ProjectTitle: kozhuhar
+
+PageList:
+- file: about.html
+  ready: 100
+- file: article.html
+  ready: 100
+- file: blog.html
+  ready: 95
+- file: card.html
+  ready: 50
+- file: catalogue.html
+  ready: 80
+- file: collections.html
+  ready: 95
+- file: main.html
+  ready: 95
+- file: text.html
+  ready: 100

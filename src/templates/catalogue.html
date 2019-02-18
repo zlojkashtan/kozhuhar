@@ -1,0 +1,67 @@
+---
+title: Catalogue
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="d-none d-lg-flex col-lg-2">
+        {% include "partials/_catalog-menu.html" %}
+      </div>
+
+      <div class="col-12 col-lg-10">
+        <div class="container-fluid p-2">
+          <div class="row">
+
+              <!-- SALE -->
+                <div class="col-md-6 col-lg-4 p-2">
+                  <a href="#" class="text-center pb-4 card">
+                    <div class="card__image embed-responsive embed-responsive-1by1">
+                      <span class="card__status sale">sale</span>
+                      <img src="img/item.png" alt="image" class="embed-responsive-item">
+                    </div>
+                    <div class="my-3 px-3 card__title">Sugar-Bowl Brown Croco</div>
+                    <div class="card__price">$ 125</div>
+                  </a>
+                </div>
+              <!-- END SALE -->
+
+              <!-- SOLD OUT -->
+                <div class="col-md-6 col-lg-4 p-2">
+                  <a href="#" class="text-center pb-4 card is-sold">
+                    <div class="card__image embed-responsive embed-responsive-1by1">
+                      <span class="card__status soldout">sold out</span>
+                      <img src="img/item2.png" alt="image" class="embed-responsive-item">
+                    </div>
+                    <div class="my-3 px-3 card__title">Sugar-Bowl Brown Croco</div>
+                    <div class="card__price">$ 125</div>
+                  </a>
+                </div>
+              <!-- END SOLD OUT -->
+
+              {% for i in range(0, 10) -%}
+                <div class="col-md-6 col-lg-4 p-2">
+                  <a href="#" class="text-center pb-4 card">
+                    <div class="card__image embed-responsive embed-responsive-1by1">
+                      <img src="img/item3.png" alt="image" class="embed-responsive-item">
+                    </div>
+                    <div class="my-3 px-3 card__title">Sugar-Bowl Brown Croco</div>
+                    <div class="card__price">$ 125</div>
+                  </a>
+                </div>
+              {%- endfor %}
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% include "partials/_pagination.html" %}
+
+  {% include "partials/_sert.html" %}
+
+{% endblock %}

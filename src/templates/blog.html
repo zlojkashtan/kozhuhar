@@ -1,0 +1,19 @@
+---
+title: Blog
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+<div class="container-fluid py-3 py-lg-1 blog">
+  <div class="row">
+    <div class="col-md-6 px-2 py-1 py-md-2"><a href="article.html" class="embed-responsive embed-responsive-16by9"><img src="img/blog1.png" class="embed-responsive-item"><div class="blog__title">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget</div></a></div>
+    <div class="col-md-6 px-2 py-1 py-md-2"><a href="article.html" class="embed-responsive embed-responsive-16by9"><img src="img/blog2.png" class="embed-responsive-item"><div class="blog__title">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget</div></a></div>
+    <div class="col-md-6 px-2 py-1 py-md-2"><a href="article.html" class="embed-responsive embed-responsive-16by9"><img src="img/blog3.png" class="embed-responsive-item"><div class="blog__title">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget</div></a></div>
+    <div class="col-md-6 px-2 py-1 py-md-2"><a href="article.html" class="embed-responsive embed-responsive-16by9"><img src="img/blog4.png" class="embed-responsive-item"><div class="blog__title">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget</div></a></div>
+  </div>
+</div>
+
+{% include "partials/_pagination.html" %}
+
+{% endblock %}

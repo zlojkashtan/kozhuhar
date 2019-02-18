@@ -1,0 +1,48 @@
+---
+title: Card
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	<div class="container-fluid product">
+        <div class="row">
+            <div class="col-2">1</div>
+            <div class="col-6">2</div>
+            <div class="col-4">
+              <div class="product__title">Shopper Trape Shape Camel</div>
+              <div class="py-1 product__price">$ 194</div>
+              <div class="py-3 product__description">Сумка Sugar-bowl с ассиметричным креплением</div>
+              <div class="product__features">
+                <ul>
+                  <li>- Состав: натуральная кожа (Италия)</li>
+                  <li>- Цвет кожи: светло-коричневый (текстура крокодил)</li>
+                  <li>- Цвет фурнитуры: стальной</li>
+                  <li>- Размеры: 16 х 20,5 х 11 см</li>
+                  <li>- В комплекте две ручки: короткая из принтованной кожи</li>
+                  <li>- 52 см; длинная - 120 см (регулируетсяv</li>
+                </ul>
+              </div>
+              <div class="product__variants">Колір:</div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container-fluid py-5 ralated">
+      <div class="row">
+        <div class="col-12 p-2 pb-3">Схожі товары:</div>
+        {% for i in range(0, 3) -%}
+          <div class="col-md-6 col-lg-4 p-2">
+            <a href="#" class="text-center pb-4 card">
+              <div class="card__image embed-responsive embed-responsive-1by1">
+                <img src="img/item3.png" alt="image" class="embed-responsive-item">
+              </div>
+              <div class="my-3 px-3 card__title">Sugar-Bowl Brown Croco</div>
+              <div class="card__price">$ 125</div>
+            </a>
+          </div>
+        {%- endfor %}
+      </div>
+    </div>
+
+{% endblock %}

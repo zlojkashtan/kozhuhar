@@ -1,0 +1,18 @@
+---
+title: Collections
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+<div class="container-fluid collections py-4 py-md-0">
+  {% for i in range(0, 3) -%}
+    <div class="row mb-3">
+      <div class="col-12 py-md-2 collections__title">Winter 2018</div>
+      <a href="#" class="col-12 col-md-4 col-lg-3"><img src="img/collection1.png" alt="image"></a>
+      <a href="#" class="d-none d-md-flex col-md-4 col-lg-3"><img src="img/collection2.png" alt="image"></a>
+      <a href="#" class="d-none d-md-flex col-md-4 col-lg-3"><img src="img/collection3.png" alt="image"></a>
+      <div class="col-12 col-lg-3 collections__view"><a href="#">View all collection</a></div>
+    </div>
+  {%- endfor %}
+</div>
+{% endblock %}
