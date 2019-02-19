@@ -8,7 +8,7 @@ PageList:
 - file: blog.html
   ready: 95
 - file: card.html
-  ready: 50
+  ready: 80
 - file: catalogue.html
   ready: 80
 - file: collections.html

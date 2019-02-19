@@ -10,13 +10,17 @@ body
 	font-family: 'MyriadProRegular', sans-serif
 	color: #9b9b9b
 	&.is-fixed
-		padding-top: 70px
+		padding-top: 60px
+		+md
+			padding-top: 70px
 		header
 			z-index: 9
 			top: 0
 			position: absolute
 			height: 100vh
 			overflow: scroll
+			& > .row
+				background: #fff
 a
 	color: inherit
 	background-color: transparent
@@ -33,13 +37,11 @@ a
 .banner
 	&__top
 		min-height: 390px
-		margin-top: -61px
+		margin-top: -60px
 		+md
-			//height: 528px
-			margin-top: -71px
+			margin-top: -70px
 		+lg
-			//height: 658px
-			margin-top: -121px
+			margin-top: -120px
 		a
 			font-family: 'MyriadProSemibold', sans-serif;
 			font-size: 1.875rem
@@ -280,6 +282,30 @@ a
 
 .product
 	font-size: 0.875rem
+	&__thumbs
+		img
+			width: 100%
+			height: auto
+			margin-bottom: 1em
+			cursor: pointer
+			&.is-selected
+				opacity: 0.5
+	&__images
+		position: relative
+		&-count
+			color: #fff
+			position: absolute
+			top: 1em
+			left: 1em
+			z-index: 1
+		img
+			width: 100%
+			height: 100vw
+			margin-bottom: 2em
+			object-fit: cover
+			object-position: 50% 50%
+			+md
+				height: auto
 	&__title
 		font-size: 1.125rem
 		color: #4a4a4a
@@ -297,7 +323,12 @@ a
 				padding: 0.2em
 	&__variants
 
+	.sticky
+		position: sticky
+		top: 2em
 
+.related
+	color: #4A4A4A
 /// BLog ///
 
 .blog
@@ -370,17 +401,20 @@ a
 /// Header ///
 
 header
-	padding: 18px 0 0 0
 	position: relative
 	z-index: 1
-	+md
-		padding: 24px 0 0 0
-	+lg
-		padding: 10px 0 30px 0
+	> .row
+		padding: 18px 0 0 0
+		+md
+			padding: 24px 0 0 0
+		+lg
+			padding: 10px 0 30px 0
 	.logo
 		display: block
 		width: 92px
 		margin: -3px 0 0 0
+		position: relative
+		z-index: 9
 		+md
 			width: 123px
 		+lg
