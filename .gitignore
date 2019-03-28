@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+/Kozuhar_files
 
 # testing
 /coverage
