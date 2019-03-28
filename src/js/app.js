@@ -24,21 +24,33 @@ $( document ).ready(function() {
 
 
   if ($(window).width() < 768) {
-
     var $status = $('.js-count');
     var $slickElement = $('.slider');
-
     $slickElement.on('init reInit afterChange', function(event, slick, currentSlide) {
       var i = (currentSlide ? currentSlide : 0) + 1;
       $status.text(i + '/' + slick.slideCount);
     });
-
     $slickElement.slick({
       arrows: false,
       fade: false,
       infinite: true
     });
   }
+
+  $('.minus').click(function() {
+    var $input = $(this).parent().find('input[type=text]');
+    var count = parseInt($input.val()) - 1;
+    count = count < 1 ? 1 : count;
+    $input.val(count);
+    $input.change();
+    return false;
+  });
+  $('.plus').click(function() {
+    var $input = $(this).parent().find('input[type=text]');
+    $input.val(parseInt($input.val()) + 1);
+    $input.change();
+    return false;
+  });
 
 
 });

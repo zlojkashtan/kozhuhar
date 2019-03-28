@@ -9,6 +9,7 @@
 body
 	font-family: 'MyriadProRegular', sans-serif
 	color: #9b9b9b
+	background-color: #fcfcfc
 	&.is-fixed
 		padding-top: 60px
 		+md
@@ -322,6 +323,40 @@ a
 			li
 				padding: 0.2em
 	&__variants
+		.variant
+			margin-right: 16px
+			display: inline-block
+			border: 1px solid #fff
+			border-radius: 50%
+			span
+				border-radius: 50%
+				display: block
+				width: 38px
+				height: 38px
+				border: 3px solid #fff
+			&:hover,
+			&.is-current
+				cursor: pointer
+				border-color: #9B9B9B
+
+	&__buy
+		display: flow-root
+		.stepper
+			font-size: 1rem
+			> *
+				float: left
+				width: 45px
+				height: 45px
+				padding: 0
+				border: 1px solid #c2c2c2
+				text-align: center
+		.qty
+			border-left: none
+			border-right: none
+		.button
+			float: right
+			padding: 0 2rem
+
 
 	.sticky
 		position: sticky
@@ -329,7 +364,9 @@ a
 
 .related
 	color: #4A4A4A
-/// BLog ///
+
+
+/// Blog ///
 
 .blog
 	a
@@ -355,6 +392,126 @@ a
 		+lg
 			padding: 0 100px
 			font-size: 1.125rem
+
+
+/// Cart ///
+
+.cart
+	// [class*="col-"]
+	// 	border: 1px solid red
+	// 	+md
+	// 		border: 1px solid blue
+	// 	+lg
+	// 		border: 1px solid green
+
+	&-header
+		font-weight: 700
+		font-size: 0.75rem
+		+lg
+			font-size: 0.875rem
+
+	&-item
+		border: 1px solid #eaeaea
+		svg
+			&:hover
+				opacity: 0.8
+		img
+			width: 40px
+			height: 40px
+			object-fit: cover
+			margin-right: 1em
+			+md
+				float: left
+				width: 70px
+				height: 70px
+			+lg
+				width: 105px
+				height: 105px
+		&__title
+			display: inline-block
+			text-transform: uppercase
+			color: #4a4a4a
+			font-size: 0.75rem
+			padding-top: 0.5em
+			+md
+				font-size: 0.875rem
+			+lg
+				padding-top: 1em
+				font-size: 1.125rem
+		&__description
+			color: #9b9b9b
+			font-size: 0.75rem
+			+lg
+				font-size: 0.875rem
+		&__price,
+		&__price-total
+			color: #9b9b9b
+			font-family: "MyriadProSemibold", sans-serif
+			font-size: 0.875rem
+			+md
+				font-size: 1rem
+			+lg
+				font-size: 1.375rem
+			&-total
+				color: #4a4a4a
+		&__qty
+			div
+				padding: 4px 0
+				display: inline-block
+				width: 45px
+				+md
+					width: auto
+				> *
+					float: none
+					padding: 0
+					border: 1px solid #c2c2c2
+					text-align: center
+					width: 38px
+					height: 38px
+					+md
+						float: left
+						height: 40px
+						width: 40px
+					+lg
+						height: 45px
+						width: 45px
+				.qty
+					border-top: none
+					border-bottom: none
+					border-left: 1px solid #c2c2c2
+					border-right: 1px solid #c2c2c2
+					+md
+						border-top: 1px solid #c2c2c2
+						border-bottom: 1px solid #c2c2c2
+						border-left: none
+						border-right: none
+	&-footer
+		&__coupon
+			font-size: 0.875rem
+			[type=text]
+				border: 1px solid #c2c2c2
+			.button
+				margin-left: -3px
+				margin-top: 1px
+				padding: 0 18px
+		&__total
+			font-family: "MyriadProSemibold", sans-serif
+			font-size: 0.875rem
+			+md
+				font-size: 1rem
+			+lg
+				font-size: 1.375rem
+			span
+				margin-left: 14px
+				color: #4a4a4a
+				+lg
+					margin-left: 58px
+		&__buy
+			padding-top: 0.5rem
+			+md
+				padding-top: 2rem
+			.button
+				padding: 0 50px
 
 
 /// Breadcrumb ///
@@ -424,8 +581,8 @@ header
 	a
 		color: #4a4a4a
 		text-transform: uppercase
-	&.inactive
-		color: #9b9b9b
+		&.inactive
+			color: #9b9b9b
 	.nav
 		display: flex
 		flex-wrap: wrap
@@ -481,6 +638,9 @@ header
 			border-top: 1px solid #ececec
 			padding: 1em 0
 
+
+/// Footer ///
+
 .footer
 	background-color: #ffffff
 	+md
@@ -489,6 +649,25 @@ header
 		border: .5px solid #c2c2c2
 	ul
 		margin-bottom: 0
+	&__social
+		a
+            margin: 0 22px
+	&__subscribe
+		span
+			font-size: 1.125rem
+			color: #4a4a4a
+			+md
+				font-size: 1.375rem
+		input
+			height: 33px
+			+md
+				height: 45px
+			&[type=email]
+				margin-right: 7px
+				min-width: 200px
+		.button
+			+md
+				padding: 0 3em
 	&__advantages
 		font-family: "MyriadProSemibold", sans-serif
 		color: #4a4a4a
@@ -520,3 +699,18 @@ header
 			+lg
 				padding-top: 13px
 				padding-bottom: 20px
+
+
+/// Form ///
+
+input
+	height: 45px
+	padding: 0 1em
+.button
+	font-size: .875rem
+	font-weight: 700
+	text-transform: uppercase
+	color: #fff
+	background: #4a4a4a
+	&:hover
+		opacity: 0.8

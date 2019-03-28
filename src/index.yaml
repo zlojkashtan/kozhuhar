@@ -2,18 +2,20 @@ ProjectTitle: kozhuhar
 
 PageList:
 - file: about.html
-  ready: 100
+  ready: 99
 - file: article.html
-  ready: 100
+  ready: 99
 - file: blog.html
-  ready: 95
+  ready: 99
 - file: card.html
-  ready: 80
+  ready: 99
+- file: cart.html
+  ready: 99
 - file: catalogue.html
-  ready: 80
+  ready: 99
 - file: collections.html
-  ready: 95
+  ready: 99
 - file: main.html
-  ready: 95
+  ready: 99
 - file: text.html
-  ready: 100
+  ready: 99

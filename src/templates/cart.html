@@ -1,0 +1,63 @@
+---
+title: Cart
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+<div class="container-fluid pt-3 cart">
+
+  <div class="row justify-content-center align-self-center">
+    <h2>Shopping Cart</h2>
+  </div>
+
+  <div class="row no-gutters my-3 text-center d-none d-md-flex cart-header">
+    <div class="col-7 col-md-5">Назва:</div>
+    <div class="col-md-2 d-none d-md-block">Ціна:</div>
+    <div class="col-2">Кількість:</div>
+    <div class="col-2">Сумма:</div>
+    <div class="col-1">
+      <svg width="24" height="24">
+          <use xlink:href="img/sprite.svg#minus"></use>
+      </svg>
+    </div>
+  </div>
+
+  {% for i in range(0, 3) -%}
+  <div class="row no-gutters my-1 cart-item">
+    <div class="col-7 col-md-5 p-1 p-md-0">
+      <img src="img/product1.png" alt="">
+      <a href="./card.html" class="cart-item__title">Shopper Trape Shape Camel</a>
+      <div class="cart-item__description">Сумка Sugar-bowl с ассиметричным креплением</div>
+    </div>
+    <div class="col-md-2 align-self-center text-center d-none d-md-block cart-item__price">$ 194</div>
+    <div class="col-2 align-self-center text-center cart-item__qty">
+      <div>
+        <input type="button" class="minus" value="-" />
+        <input class="qty" type="text" value="1" />
+        <input type="button" class="plus" value="+" />
+      </div>
+    </div>
+    <div class="col-2 align-self-center text-center cart-item__price-total">$ 194</div>
+    <div class="col-1 align-self-center text-center">
+      <a href="#">
+        <svg width="24" height="24">
+            <use xlink:href="img/sprite.svg#del"></use>
+        </svg>
+      </a>
+    </div>
+  </div>
+  {%- endfor %}
+
+  <div class="row cart-footer my-3 my-md-5">
+    <div class="col-md-4 align-self-center text-center text-md-left cart-footer__coupon">
+      Додати код купона для знижки:<br>
+      <input type="text">
+      <input type="button" class="button" value="+">
+    </div>
+    <div class="col-md-5 col-lg-5 col-xl-6 align-self-center text-center text-md-right cart-footer__total "><br>Загальна сума: <span>$299</span></div>
+    <div class="col-md-3 col-lg-3 col-xl-2 align-self-center text-center text-md-right cart-footer__buy"><input type="button" class="button" value="придбати"></div>
+  </div>
+
+</div>
+
+{% endblock %}
